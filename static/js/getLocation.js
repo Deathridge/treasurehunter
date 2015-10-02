@@ -57,7 +57,7 @@ function successCallback(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
     var x = document.getElementById("demo");
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    alert( "Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude
     + 
     "<br>accuracy: " + position.coords.accuracy
@@ -66,7 +66,7 @@ function successCallback(position) {
     + 
     "<br>heading: " + position.coords.heading
     + 
-    "<br>speed: " + position.coords.speed;
+    "<br>speed: " + position.coords.speed);
 }
 
 setInterval(getLocation(), 2000);
