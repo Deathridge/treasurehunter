@@ -16,12 +16,12 @@ function getLocation() {
 }
 
 function errorCallback_highAccuracy(position) {
-	
+	var x = document.getElementById("demo");
     if (error.code == error.TIMEOUT)
     {
         // Attempt to get GPS loc timed out after 5 seconds, 
         // try low accuracy location
-       x.innerHTML("attempting to get low accuracy location");
+       x.innerHTML = "attempting to get low accuracy location";
         navigator.geolocation.watchPosition(
                successCallback, 
                errorCallback_lowAccuracy,
@@ -36,11 +36,11 @@ function errorCallback_highAccuracy(position) {
         msg += "POSITION_UNAVAILABLE";
     msg += ", msg = "+error.message;
     
-   x.innerHTML(msg);
+   x.innerHTML = msg;
 }
 
 function errorCallback_lowAccuracy(position) {
-	
+	var x = document.getElementById("demo");
     var msg = "<p>Can't get your location (low accuracy attempt). Error = ";
     if (error.code == 1)
         msg += "PERMISSION_DENIED";
@@ -50,13 +50,14 @@ function errorCallback_lowAccuracy(position) {
         msg += "TIMEOUT";
     msg += ", msg = "+error.message;
     
-    x.innerHTML(msg);
+    x.innerHTML = msg;
 }
 
 function successCallback(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
-    x.innerHTML("Latitude: " + position.coords.latitude + 
+    var x = document.getElementById("demo");
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude
     + 
     "<br>accuracy: " + position.coords.accuracy
@@ -65,7 +66,7 @@ function successCallback(position) {
     + 
     "<br>heading: " + position.coords.heading
     + 
-    "<br>speed: " + position.coords.speed);
+    "<br>speed: " + position.coords.speed;
 }
 
 setInterval(getLocation(), 2000);
