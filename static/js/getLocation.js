@@ -34,7 +34,7 @@ function errorCallback_highAccuracy(position) {
         // Attempt to get GPS loc timed out after 5 seconds, 
         // try low accuracy location
         document.getElementById("demo").append("attempting to get low accuracy location");
-        navigator.geolocation.getCurrentPosition(
+        navigator.geolocation.watchPosition(
                successCallback, 
                errorCallback_lowAccuracy,
                {maximumAge:600000, timeout:10000, enableHighAccuracy: false});
@@ -61,12 +61,13 @@ function errorCallback_lowAccuracy(position) {
         msg += "TIMEOUT";
     msg += ", msg = "+error.message;
     
-    $('body').append(msg);
+    document.getElementById("demo").append(msg);
 }
 
 function successCallback(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
-    $('body').append("<p>Your location is: " + latitude + "," + longitude+" </p><p>Accuracy="+position.coords.accuracy+"m");
+    document.getElementById("demo").append("<p>Your location is: " + latitude + "," + longitude+" </p><p>Accuracy="+position.coords.accuracy+"m");
 }
-setInterval(getLocation(), 500);
+
+setInterval(getLocation(), 2000);
