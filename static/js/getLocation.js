@@ -2,8 +2,7 @@ function getLocation() {
 	var x = document.getElementById("demo");
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(
-        	showPosition,
-        	geolocationError,
+        	showPosition,        	
         	{
         		timeout: 0,
         		enableHighAccuracy: true,
