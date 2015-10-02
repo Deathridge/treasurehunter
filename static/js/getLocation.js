@@ -16,7 +16,7 @@ function getLocation() {
 }
 
 function errorCallback_highAccuracy(position) {
-	x = document.getElementById("demo");
+	
     if (error.code == error.TIMEOUT)
     {
         // Attempt to get GPS loc timed out after 5 seconds, 
@@ -40,7 +40,7 @@ function errorCallback_highAccuracy(position) {
 }
 
 function errorCallback_lowAccuracy(position) {
-	x = document.getElementById("demo");
+	
     var msg = "<p>Can't get your location (low accuracy attempt). Error = ";
     if (error.code == 1)
         msg += "PERMISSION_DENIED";
@@ -56,7 +56,6 @@ function errorCallback_lowAccuracy(position) {
 function successCallback(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
-    x = document.getElementById("demo");
     x.innerHTML("Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude
     + 
