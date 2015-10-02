@@ -9,7 +9,15 @@ function getLocation() {
 function showPosition(position) {
 	var x = document.getElementById("demo");
     x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude; 
+    "<br>Longitude: " + position.coords.longitude
+    + 
+    "<br>accuracy: " + position.coords.accuracy
+    + 
+    "<br>altitude: " + position.coords.altitude
+    + 
+    "<br>heading: " + position.coords.heading
+    + 
+    "<br>speed: " + position.coords.speed; 
 }
 
 setInterval(getLocation(), 500);
