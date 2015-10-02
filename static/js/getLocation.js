@@ -2,7 +2,7 @@ function getLocation() {
 	var x = document.getElementById("demo");
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(
-        	showPosition,  
+        	successCallback,  
         	errorCallback_highAccuracy,      	
         	{
         		timeout: 0,
@@ -13,19 +13,6 @@ function getLocation() {
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
-}
-function showPosition(position) {
-	var x = document.getElementById("demo");
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude
-    + 
-    "<br>accuracy: " + position.coords.accuracy
-    + 
-    "<br>altitude: " + position.coords.altitude
-    + 
-    "<br>heading: " + position.coords.heading
-    + 
-    "<br>speed: " + position.coords.speed; 
 }
 
 function errorCallback_highAccuracy(position) {
@@ -67,7 +54,16 @@ function errorCallback_lowAccuracy(position) {
 function successCallback(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
-    document.getElementById("demo").innerHTML("<p>Your location is: " + latitude + "," + longitude+" </p><p>Accuracy="+position.coords.accuracy+"m");
+    document.getElementById("demo").innerHTML("Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude
+    + 
+    "<br>accuracy: " + position.coords.accuracy
+    + 
+    "<br>altitude: " + position.coords.altitude
+    + 
+    "<br>heading: " + position.coords.heading
+    + 
+    "<br>speed: " + position.coords.speed);
 }
 
 setInterval(getLocation(), 2000);
