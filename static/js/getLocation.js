@@ -19,7 +19,7 @@ function errorCallback_highAccuracy(position) {
 	var x = document.getElementById("demo");
     if (error.code == error.TIMEOUT)
     {
-       / // Attempt to get GPS loc timed out after 5 seconds, 
+        // Attempt to get GPS loc timed out after 5 seconds, 
         // try low accuracy location
        x.innerHTML = "attempting to get low accuracy location";
         navigator.geolocation.watchPosition(
