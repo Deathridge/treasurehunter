@@ -3,7 +3,7 @@ function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(
         	showPosition,
-        	positionError,
+        	geolocationError,
         	{
         		timeout: 0,
         		enableHighAccuracy: true,
