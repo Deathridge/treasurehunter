@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Daniel Betteridge">
+    <meta name="keywords" content="HTML, CSS, Javascript, Python, Django">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <title>TreasureHunter</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+
+
+<body>
+<div class="wrapper">
+	<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+	<p id="demo"></p>
+	{% block content %}{% endblock %}
+	</div>
+</div>
+<script src="{% static "js/getLocation.js" %}"></script>
+</body>
+
+<footer>
+	
+</footer>
+
+
+</html>
+
+
