@@ -1,9 +1,9 @@
 function getLocation() {
 	var x = document.getElementById("demo");
-	var coor;
+	
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(
-        	coor = successCallback,  
+        	updateMap,  
         	errorCallback_highAccuracy,      	
         	{
         		timeout: 10000,
@@ -15,7 +15,7 @@ function getLocation() {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
 
-    return coor;
+   
 }
 
 function errorCallback_highAccuracy(position) {
@@ -71,10 +71,14 @@ function successCallback(position) {
     + 
     "<br>speed: " + position.coords.speed;
 
-    return {
-    		latitude: position.coords.latitude, 
-    		longitude: position.coords.longitude
-    	};
+    
 }
+
+function updateMap(position){
+	console.log(latitude);
+	L.mapbox.accessToken = 'danielbetteridge.cif7n6i1q0sptsolzat1vewt9';
+	var map = L.mapbox.map('map', 'mapbox.streets').setView([position.coords.latitude, position.coords.longitude], 9);
+};
+
 
 setInterval(getLocation(), 2000);
