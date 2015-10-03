@@ -75,7 +75,7 @@ function successCallback(position) {
 }
 
 function updateMap(position){
-	L.mapbox.accessToken = 'danielbetteridge.cif7n6i1q0sptsolzat1vewt9';
+	L.mapbox.accessToken = 'danielbetteridge.njni1p58';
 	var map = L.mapbox.map('map', 'mapbox.streets').setView([position.coords.latitude, position.coords.longitude], 9);
 };
 
