@@ -68,7 +68,10 @@ function successCallback(position) {
     + 
     "<br>speed: " + position.coords.speed;
 
-    return [position.coords.latitude, position.coords.longitude];
+    return {
+    		latitude: position.coords.latitude, 
+    		longitude: position.coords.longitude
+    	};
 }
 
 setInterval(getLocation(), 2000);
