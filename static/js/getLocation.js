@@ -81,4 +81,4 @@ function updateMap(position){
 };
 
 
-setInterval(getLocation(), 2000);
+getLocation();
