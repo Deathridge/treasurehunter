@@ -88,8 +88,8 @@ function updateMap(position){
         // coordinates here are in longitude, latitude order because
         // x, y is the standard for GeoJSON and many formats
         coordinates: [
-          position.coords.latitude,
-          position.coords.longitude 
+          position.coords.longitude,
+          position.coords.latitude 
         ]
     }
     
