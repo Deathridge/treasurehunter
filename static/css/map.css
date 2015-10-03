@@ -8,7 +8,7 @@ body { margin:0; padding:0; }
 #demo {
 	position:absolute;
 	top:0px;
-	right: 50%;
+	text-align: middle;
 	width:100%;
 	z-index: 999;
 }
