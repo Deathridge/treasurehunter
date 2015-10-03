@@ -2,7 +2,7 @@ function getLocation() {
 	var x = document.getElementById("demo");
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(
-        	successCallback,  
+        	return successCallback,  
         	errorCallback_highAccuracy,      	
         	{
         		timeout: 10000,
@@ -13,10 +13,6 @@ function getLocation() {
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
-    return {
-    		latitude: position.coords.latitude, 
-    		longitude: position.coords.longitude
-    	};
 }
 
 function errorCallback_highAccuracy(position) {
@@ -72,7 +68,10 @@ function successCallback(position) {
     + 
     "<br>speed: " + position.coords.speed;
 
-
+    return {
+    		latitude: position.coords.latitude, 
+    		longitude: position.coords.longitude
+    	};
 }
 
 setInterval(getLocation(), 2000);
