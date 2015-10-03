@@ -1,8 +1,9 @@
 function getLocation() {
 	var x = document.getElementById("demo");
+	var coor;
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(
-        	var coor = successCallback,  
+        	coor = successCallback,  
         	errorCallback_highAccuracy,      	
         	{
         		timeout: 10000,
