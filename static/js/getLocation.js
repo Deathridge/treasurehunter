@@ -2,7 +2,7 @@ function getLocation() {
 	var x = document.getElementById("demo");
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(
-        	return successCallback,  
+        	var coor = successCallback,  
         	errorCallback_highAccuracy,      	
         	{
         		timeout: 10000,
@@ -13,6 +13,8 @@ function getLocation() {
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
+
+    return coor;
 }
 
 function errorCallback_highAccuracy(position) {
