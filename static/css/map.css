@@ -1,8 +1,12 @@
 body { margin:0; padding:0; }
 #map { 
-	width:50%; 
-	height:50%;
+	width: 100%;
 	position: absolute;
-	
+	top:0px;
 	bottom: 0px;
+}
+#demo {
+	position:absolute;
+	top:0px;
+	z-index: -1;
 }
