@@ -91,17 +91,9 @@ function updateMap(position){
           position.coords.latitude,
           position.coords.longitude 
         ]
-    },
-    properties: {
-        title: 'Currnt Location',
-        description: '',
-        // one can customize markers by adding simplestyle properties
-        // https://www.mapbox.com/guides/an-open-platform/#simplestyle
-        'marker-size': 'large',
-        'marker-color': '#BE9A6B',
-        'marker-symbol': 'house'
     }
-}).addTo(map);
+    
+	}).addTo(map);
 	var x = document.getElementById("demo");
 	x.innerHTML = "Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude
