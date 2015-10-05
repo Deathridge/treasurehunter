@@ -58,7 +58,7 @@ function errorCallback_lowAccuracy(position) {
 
 function successUpdate(position){
 	L.mapbox.accessToken = 'pk.eyJ1IjoiZGFuaWVsYmV0dGVyaWRnZSIsImEiOiJjaWY3bjZqazcwc3IzczdrcmU1NjJ1czdnIn0.Xr0sZHMxs6Fvp7lzmmtJSg';
-	var map = L.mapbox.map('map', 'mapbox.streets').setView([position.coords.latitude, position.coords.longitude], 22);
+	var map = L.mapbox.map('map', 'danielbetteridge.njni1p58').setView([position.coords.latitude, position.coords.longitude], 22);
 
 
 	L.mapbox.featureLayer({
