@@ -1,14 +1,31 @@
 body { margin:0; padding:0; }
-#map { 
+.container {	
+	height: 100%;		
+}
+
+#map-column {
+	position: relative;
+	height: 400px;
+}
+
+#map { 	
 	width: 100%;
 	position: absolute;
 	top:0px;
 	bottom: 0px;
+	
+	left:0px;
+	right: 0px;
 }
+
 #demo {
-	position:absolute;
-	top:0px;
+	position:relative;
 	text-align: middle;
-	width:100%;
+	
 	z-index: 999;
 }
+
+body, html {
+	height: 100%;
+}
+

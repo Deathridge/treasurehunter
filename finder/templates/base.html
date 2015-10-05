@@ -13,20 +13,23 @@
 
     <title>TreasureHunter</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+    
 	<link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
 	<link rel="stylesheet" href="{% static "css/map.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
 </head>
 
 
 <body>
-<div class="wrapper">
+
 	
 	{% block content %}{% endblock %}
 
 	
-</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
 <script src="{% static "js/getLocation.js" %}"></script>
 <script src="{% static "js/map.js" %}"></script>
 </body>

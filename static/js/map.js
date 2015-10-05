@@ -90,3 +90,13 @@ function successUpdate(position){
 };
 
 setInterval(updateMap(), 1000);
+
+$('#map').hover(
+    function() {$(this).addClass('z-depth-2') },
+    function(){ $(this).removeClass('z-depth-2') }
+);
+
+$('#demo').hover(
+    function() {$(this).addClass('z-depth-2') },
+    function(){ $(this).removeClass('z-depth-2') }
+);
